@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KV Iluminação - Portfólio Profissional</title>
+    <style>
+        /* Reset e Estilos Globais */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+        }
+        
+        body {
+            background-color: #f8f8f8;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        /* Cabeçalho */
+        header {
+            background-color: #000;
+            color: #fff;
+            padding: 2rem 0;
+            text-align: center;
+            position: relative;
+        }
+        
+        .logo {
+            font-size: 2.5rem;
+            font-weight: bold;
+            letter-spacing: 3px;
+            margin-bottom: 0.5rem;
+        }
+        
+        .slogan {
+            font-size: 1.2rem;
+            opacity: 0.8;
+            margin-bottom: 1.5rem;
+        }
+        
+        /* Navegação */
+        nav {
+            background-color: #111;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin: 0 1.5rem;
+        }
+        
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.1rem;
+            transition: color 0.3s;
+        }
+        
+        nav ul li a:hover {
+            color: #f0c14b;
+        }
+        
+        /* Seção Hero */
+        .hero {
+            height: 70vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1513519245088-0e12902e5a38?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: #fff;
+            padding: 0 2rem;
+        }
+        
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .hero p {
+            font-size: 1.5rem;
+            max-width: 800px;
+            margin-bottom: 2rem;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background-color: #f0c14b;
+            color: #000;
+            padding: 0.8rem 2rem;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        
+        .cta-button:hover {
+            background-color: #ddb347;
+        }
+        
+        /* Seção Sobre */
+        .about {
+            padding: 5rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 3rem;
+        }
+        
+        .about-text {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .about-text h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            color: #222;
+        }
+        
+        .about-text p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+        
+        .about-image {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .about-image img {
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* Seção Portfólio */
+        .portfolio {
+            padding: 5rem 2rem;
+            background-color: #f0f0f0;
+        }
+        
+        .portfolio h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #222;
+        }
+        
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s;
+        }
+        
+        .gallery-item:hover {
+            transform: translateY(-5px);
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.5s;
+        }
+        
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+        
+        .gallery-item-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+            color: #fff;
+            padding: 1.5rem;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        
+        .gallery-item:hover .gallery-item-overlay {
+            opacity: 1;
+        }
+        
+        /* Seção Contato */
+        .contact {
+            padding: 5rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .contact h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #222;
+        }
+        
+        .contact-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 3rem;
+        }
+        
+        .contact-info {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .contact-info h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .contact-info p {
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+        
+        .social-links {
+            margin-top: 2rem;
+        }
+        
+        .social-links a {
+            display: inline-block;
+            margin-right: 1rem;
+            color: #333;
+            font-size: 1.5rem;
+            transition: color 0.3s;
+        }
+        
+        .social-links a:hover {
+            color: #f0c14b;
+        }
+        
+        .contact-form {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+        }
+        
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+        
+        .form-group textarea {
+            height: 150px;
+        }
+        
+        .submit-button {
+            background-color: #000;
+            color: #fff;
+            border: none;
+            padding: 1rem 2rem;
+            font-size: 1rem;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+        
+        .submit-button:hover {
+            background-color: #333;
+        }
+        
+        /* Rodapé */
+        footer {
+            background-color: #000;
+            color: #fff;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 3rem;
+        }
+        
+        footer p {
+            margin-bottom: 1rem;
+        }
+        
+        /* Responsividade */
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            nav ul li {
+                margin: 0.5rem 0;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .hero p {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">KV ILUMINAÇÃO</div>
+        <div class="slogan">Transformando ambientes com luz e estilo</div>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="sobre.html">Sobre</a></li>
+            <li><a href="servicos.html">Serviços</a></li>
+            <li><a href="projetos.html">Projetos</a></li>
+            <li><a href="depoimentos.html">Depoimentos</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="contato.html">Contato</a></li>
+        </ul>
+    </nav>
+    
+    <section id="home" class="hero">
+        <h1>Iluminação que inspira</h1>
+        <p>Projetos personalizados de iluminação residencial e comercial que valorizam cada espaço com elegância e funcionalidade.</p>
+        <a href="#contact" class="cta-button">Solicite um Orçamento</a>
+    </section>
+    
+    <section id="about" class="about">
+        <div class="about-text">
+            <h2>Sobre o Trabalho</h2>
+            <p>Com anos de experiência no mercado de iluminação, a KV Iluminação se destaca pela qualidade dos projetos e pela atenção aos detalhes. Nossa missão é transformar ambientes através da luz, criando atmosferas únicas e funcionais.</p>
+            <p>Trabalhamos com os melhores fornecedores do mercado, oferecendo soluções em iluminação LED, spots, lustres, arandelas e projetos personalizados para cada necessidade.</p>
+            <p>Seja para residências, comércios ou espaços corporativos, criamos projetos que harmonizam estética, funcionalidade e eficiência energética.</p>
+        </div>
+        <div class="about-image">
+            <img src="https://images.unsplash.com/photo-1583845112203-4547b7f31e7e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Projeto de iluminação">
+        </div>
+    </section>
+    
+    <section id="portfolio" class="portfolio">
+        <h2>Nossos Projetos</h2>
+        <div class="gallery">
+            <!-- Projeto 1 -->
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1513519245088-0e12902e5a38?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Projeto Residencial">
+                <div class="gallery-item-overlay">
+                    <h3>Residência Moderna</h3>
+                    <p>Iluminação contemporânea com foco em conforto visual</p>
+                </div>
+            </div>
+            
+            <!-- Projeto 2 -->
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1583845112269-455bf6de80b5?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Projeto Comercial">
+                <div class="gallery-item-overlay">
+                    <h3>Loja Comercial</h3>
+                    <p>Iluminação destacando produtos e criando atmosfera acolhedora</p>
+                </div>
+            </div>
+            
+            <!-- Projeto 3 -->
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1558002038-1055907df827?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Projeto de Exterior">
+                <div class="gallery-item-overlay">
+                    <h3>Área Externa</h3>
+                    <p>Iluminação decorativa para jardim e área de lazer</p>
+                </div>
+            </div>
+            
+            <!-- Projeto 4 -->
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1583845112203-4547b7f31e7e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Projeto Corporativo">
+                <div class="gallery-item-overlay">
+                    <h3>Escritório Corporativo</h3>
+                    <p>Iluminação funcional com design moderno</p>
+                </div>
+            </div>
+            
+            <!-- Projeto 5 -->
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1558002038-1055907df827?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Projeto de Restaurante">
+                <div class="gallery-item-overlay">
+                    <h3>Restaurante</h3>
+                    <p>Iluminação que cria atmosfera aconchegante</p>
+                </div>
+            </div>
+            
+            <!-- Projeto 6 -->
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1583845112203-4547b7f31e7e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Projeto Residencial">
+                <div class="gallery-item-overlay">
+                    <h3>Sala de Estar</h3>
+                    <p>Iluminação em camadas para máximo conforto</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="contact" class="contact">
+        <h2>Entre em Contato</h2>
+        <div class="contact-container">
+            <div class="contact-info">
+                <h3>Fale Conosco</h3>
+                <p>Estamos prontos para transformar seu espaço com a melhor iluminação.</p>
+                <p><strong>Email:</strong> contato@kv-iluminacao.com</p>
+                <p><strong>Telefone:</strong> (XX) XXXX-XXXX</p>
+                <p><strong>Endereço:</strong> Cidade, Estado</p>
+                
+                <div class="social-links">
+                    <h3>Siga-nos</h3>
+                    <a href="https://www.instagram.com/kviluminacao/" target="_blank" aria-label="Instagram">📷</a>
+                    <a href="#" target="_blank" aria-label="Facebook">👍</a>
+                    <a href="#" target="_blank" aria-label="WhatsApp">💬</a>
+                </div>
+            </div>
+            
+            <div class="contact-form">
+                <form>
+                    <div class="form-group">
+                        <label for="name">Nome</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">Telefone</label>
+                        <input type="tel" id="phone" name="phone">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Mensagem</label>
+                        <textarea id="message" name="message" required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="submit-button">Enviar Mensagem</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <p>&copy; 2023 KV Iluminação. Todos os direitos reservados.</p>
+        <p>Desenvolvido com paixão por luz e design.</p>
+    </footer>
+</body>
+</html>
+kviluminacao.github.io/
+├── css/                # Arquivos de estilos (CSS)
+│   └── styles.css      # Estilos globais do site
+├── js/                 # Scripts JavaScript
+│   └── main.js         # Scripts para interatividade
+├── img/                # Imagens do site
+│   ├── projetos/       # Imagens dos projetos
+│   ├── sobre/          # Imagens da seção "Sobre"
+│   └── outros/         # Outras imagens
+├── index.html          # Página inicial
+├── servicos.html       # Página de serviços
+├── projetos.html       # Página de projetos
+├── depoimentos.html    # Página de depoimentos
+├── sobre.html          # Página "Sobre Nós"
+├── contato.html        # Página de contato
+├── faq.html            # Página de perguntas frequentes
+└── politica.html       # Página de política de privacidade
