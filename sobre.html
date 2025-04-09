@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre a KV Iluminação - Profissionais em Projetos de Luz</title>
+    <style>
+        /* ESTILOS PARA A PÁGINA SOBRE */
+        .about-page {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+            color: #333;
+        }
+        
+        .about-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .about-header h1 {
+            font-size: 2.5rem;
+            color: #222;
+            margin-bottom: 1rem;
+        }
+        
+        .about-header p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .about-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 3rem;
+            margin-bottom: 4rem;
+        }
+        
+        .about-text {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .about-text h2 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: #222;
+        }
+        
+        .about-text p {
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+        
+        .about-image {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .about-image img {
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .mission-values {
+            background-color: #f9f9f9;
+            padding: 3rem;
+            border-radius: 8px;
+            margin-bottom: 4rem;
+        }
+        
+        .mv-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+        
+        .mv-item {
+            padding: 1.5rem;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+        }
+        
+        .mv-item h3 {
+            color: #d4af37;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+        
+        .team-section {
+            margin-bottom: 4rem;
+        }
+        
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .team-member {
+            text-align: center;
+        }
+        
+        .team-member img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 1rem;
+            border: 3px solid #d4af37;
+        }
+        
+        .cta-about {
+            text-align: center;
+            padding: 3rem;
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1513519245088-0e12902e5a38?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            color: white;
+            border-radius: 8px;
+        }
+        
+        .cta-about h2 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        @media (max-width: 768px) {
+            .about-content {
+                flex-direction: column;
+            }
+            
+            .about-header h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="about-page">
+        <!-- Cabeçalho -->
+        <div class="about-header">
+            <h1>Iluminando Espaços, Criando Experiências</h1>
+            <p>A KV Iluminação combina técnica, criatividade e paixão para transformar ambientes através da luz. Conheça nossa história e o que nos torna referência em projetos luminotécnicos.</p>
+        </div>
+        
+        <!-- Conteúdo Principal -->
+        <div class="about-content">
+            <div class="about-text">
+                <h2>Nossa História</h2>
+                <p>Fundada em 2015, a KV Iluminação nasceu da paixão por criar atmosferas únicas através da luz. Começamos como uma pequena equipe de entusiastas em iluminação e hoje somos referência em projetos personalizados em toda a região.</p>
+                
+                <p>O nome KV vem das iniciais de nosso fundador, [Seu Nome], que trouxe sua experiência de [X] anos no mercado de iluminação para criar uma empresa com foco em excelência técnica e design inovador.</p>
+                
+                <p>Ao longo dos anos, já realizamos mais de [X] projetos, desde pequenas residências até grandes espaços comerciais, sempre com o mesmo compromisso: entregar soluções luminotécnicas que superem expectativas.</p>
+                
+                <h2>Nossa Abordagem</h2>
+                <p>Na KV, acreditamos que a iluminação vai além da funcionalidade - ela define atmosferas, influencia emoções e transforma a percepção dos espaços.</p>
+                
+                <p>Cada projeto começa com uma escuta atenta às necessidades do cliente, seguida por um estudo técnico detalhado do espaço. Combinamos conhecimentos de engenharia luminotécnica com sensibilidade estética para criar soluções sob medida.</p>
+            </div>
+            
+            <div class="about-image">
+                <img src="https://images.unsplash.com/photo-1583845112203-4547b7f31e7e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Equipe KV Iluminação trabalhando">
+            </div>
+        </div>
+        
+        <!-- Missão, Visão e Valores -->
+        <div class="mission-values">
+            <h2 style="text-align: center; margin-bottom: 2rem;">Nossos Pilares</h2>
+            <div class="mv-grid">
+                <div class="mv-item">
+                    <h3>Missão</h3>
+                    <p>Transformar ambientes através de soluções luminotécnicas inovadoras que harmonizam funcionalidade, estética e eficiência energética, superando as expectativas de nossos clientes.</p>
+                </div>
+                
+                <div class="mv-item">
+                    <h3>Visão</h3>
+                    <p>Ser reconhecida como referência em projetos de iluminação pela excelência técnica, criatividade e compromisso com resultados que encantam.</p>
+                </div>
+                
+                <div class="mv-item">
+                    <h3>Valores</h3>
+                    <ul style="padding-left: 1.2rem;">
+                        <li style="margin-bottom: 0.5rem;">Excelência técnica</li>
+                        <li style="margin-bottom: 0.5rem;">Criatividade aplicada</li>
+                        <li style="margin-bottom: 0.5rem;">Sustentabilidade</li>
+                        <li style="margin-bottom: 0.5rem;">Transparência</li>
+                        <li>Compromisso com resultados</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Equipe -->
+        <div class="team-section">
+            <h2 style="text-align: center;">Nosso Time</h2>
+            <p style="text-align: center; max-width: 800px; margin: 0 auto 2rem;">Uma equipe multidisciplinar unida pela paixão por iluminação e design.</p>
+            
+            <div class="team-grid">
+                <div class="team-member">
+                    <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="[Nome do Fundador]">
+                    <h3>[Nome do Fundador]</h3>
+                    <p>Fundador e Especialista Luminotécnico</p>
+                    <p>[X] anos de experiência</p>
+                </div>
+                
+                <div class="team-member">
+                    <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="[Nome]">
+                    <h3>[Nome]</h3>
+                    <p>Designer de Iluminação</p>
+                    <p>Especialista em ambientes residenciais</p>
+                </div>
+                
+                <div class="team-member">
+                    <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="[Nome]">
+                    <h3>[Nome]</h3>
+                    <p>Engenheiro Eletricista</p>
+                    <p>Projetos comerciais</p>
+                </div>
+                
+                <div class="team-member">
+                    <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="[Nome]">
+                    <h3>[Nome]</h3>
+                    <p>Atendimento e Projetos</p>
+                    <p>Relacionamento com clientes</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- CTA -->
+        <div class="cta-about">
+            <h2>Pronto para transformar seu espaço?</h2>
+            <p style="max-width: 600px; margin: 0 auto 2rem;">Nossa equipe está pronta para criar a solução perfeita em iluminação para seu projeto.</p>
+            <a href="../index.html#contact" style="display: inline-block; background: #d4af37; color: white; padding: 0.8rem 2rem; border-radius: 4px; text-decoration: none; font-weight: bold;">Fale Conosco</a>
+        </div>
+    </div>
+</body>
+</html>
